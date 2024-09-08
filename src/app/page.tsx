@@ -13,8 +13,8 @@ export default function Page() {
   // Google login handler function
   const handleGoogleLogin = () => {
     try {
-      
-      const googleLoginUrl = "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/Dashboard";
+
+      const googleLoginUrl = "https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://https://one-box-3mlf.vercel.app/Dashboard";
       if (!googleLoginUrl) {
         throw new Error('Google login URL is not defined.');
       }
