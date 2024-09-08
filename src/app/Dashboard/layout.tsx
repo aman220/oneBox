@@ -64,7 +64,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    window.location.href = '/Auth/Login'; // Adjust the path as needed
+    window.location.href = '/'; // Adjust the path as needed
   };
 
   return (
