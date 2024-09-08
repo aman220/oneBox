@@ -8,6 +8,7 @@ import {
   MoreHorizontal,
   Mail,
   Send,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import draft from "../../../../public/drafts.svg";
@@ -95,7 +96,7 @@ const Page = () => {
       );
       const data = await response.json();
       if (data.status === 200) {
-        setThreadEmails(data.data); 
+        setThreadEmails(data.data);
       }
     } catch (error) {
       console.error("Failed to fetch thread messages", error);
@@ -209,7 +210,7 @@ const Page = () => {
                 <span className="text-sm">New Replies</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <span className="text-sm hover:cursor-pointer" onClick={()=>{resetEmails()}}>Reset</span>
+                <span className="text-sm hover:cursor-pointer" onClick={() => { resetEmails() }}>Reset</span>
                 <ChevronDown className="w-5 h-5" />
               </div>
             </div>
@@ -373,7 +374,13 @@ const Page = () => {
             </div>
           )}
 
-          {boxopen ? <Replybox threadId={threadId} /> : null}
+          {boxopen ? <div className="bg-[#141517] text-gray-200 rounded-lg shadow-lg max-w-3xl mx-auto absolute bottom-1 w-full">
+            <div className="flex justify-between items-center mb-4 bg-[#23272C] p-2">
+              <h2 className="text-xl font-semibold">Reply</h2>
+              <button className="text-gray-400 hover:text-gray-200">
+                <X size={20} onClick={()=>{setBoxOpen(false)}}/>
+              </button>
+            </div> <Replybox threadId={threadId} /> </div> : null}
         </div>
 
 

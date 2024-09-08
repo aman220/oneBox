@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { X, Zap, Eye, Type, Link, Smile, Users, Code } from "lucide-react";
 interface pops {
-  threadId : string,
+  threadId: string,
 }
 
-const Replybox : React.FC<pops> = ({threadId }) => {
+const Replybox: React.FC<pops> = ({ threadId }) => {
   const [to, setTo] = useState("jeanne@icloud.com");
   const [from, setFrom] = useState("peter@reachinbox.com");
   const [fromName, setFromName] = useState("Peter");
   const [subject, setSubject] = useState("Warmup Welcome");
   const [emailBody, setEmailBody] = useState("Hi Jeanne,\n\n");
-  
+
   const [references, setReferences] = useState([
     "<dea5a0c2-336f-1dc3-4994-191a0ad3891a@gmail.com>"
   ]);
@@ -20,11 +20,11 @@ const Replybox : React.FC<pops> = ({threadId }) => {
       toName: "Jeanne",
       to: to,
       from: from,
-      fromName: fromName, 
+      fromName: fromName,
       subject: subject,
-      body: `<p>${emailBody}</p>`, 
+      body: `<p>${emailBody}</p>`,
       references: references,
-      inReplyTo: references[0] 
+      inReplyTo: references[0]
     };
 
     try {
@@ -49,13 +49,7 @@ const Replybox : React.FC<pops> = ({threadId }) => {
   };
 
   return (
-    <div className="bg-[#141517] text-gray-200 rounded-lg shadow-lg max-w-3xl mx-auto absolute bottom-1 w-full">
-      <div className="flex justify-between items-center mb-4 bg-[#23272C] p-2">
-        <h2 className="text-xl font-semibold">Reply</h2>
-        <button className="text-gray-400 hover:text-gray-200">
-          <X size={20} />
-        </button>
-      </div>
+    <>
       <div className="space-y-4 p-3">
         <div className="flex items-center">
           <span className="w-16 text-gray-400">To:</span>
@@ -127,7 +121,7 @@ const Replybox : React.FC<pops> = ({threadId }) => {
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

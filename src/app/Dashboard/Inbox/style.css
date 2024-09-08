@@ -8,3 +8,54 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+/* styles.css */
+
+/* Light Mode */
+body.light {
+    background-color: #f9f9f9;
+    color: black;
+  }
+  
+  body.light .app-container {
+    background-color: white;
+    color: black;
+  }
+  
+  body.light .sidebar {
+    background-color: #ffffff;
+    border-color: #d1d5db;
+  }
+  
+  body.light .email-list-item {
+    background-color: #f3f4f6;
+  }
+  
+  body.light .email-list-item.selected {
+    background-color: #e5e7eb;
+  }
+  
+  /* Dark Mode */
+  body.dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  body.dark .app-container {
+    background-color: #121212;
+    color: white;
+  }
+  
+  body.dark .sidebar {
+    background-color: #1e1e1e;
+    border-color: #2a2a2a;
+  }
+  
+  body.dark .email-list-item {
+    background-color: #2a2a2a;
+  }
+  
+  body.dark .email-list-item.selected {
+    background-color: #23272c;
+  }
+  
