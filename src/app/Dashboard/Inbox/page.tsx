@@ -27,6 +27,13 @@ interface Email {
   threadId: string;
 }
 
+interface TimelineItemProps {
+  step: number;
+  status: string;
+  icon: React.ReactNode;
+  iconBg: string;
+}
+
 
 interface ReplyBoxProps {
   threadId: string;
@@ -149,7 +156,7 @@ const Page = () => {
     setSelectedEmail(null);
   };
 
-  function TimelineItem({ step, status, icon, iconBg }) {
+  const TimelineItem: React.FC<TimelineItemProps> = ({ step, status, icon, iconBg }) => {
     return (
       <div className="flex items-center">
         <div className="flex flex-col items-center mr-3 relative">
@@ -166,8 +173,8 @@ const Page = () => {
           </p>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
 
 
