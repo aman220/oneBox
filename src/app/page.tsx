@@ -29,6 +29,7 @@ export default function Page() {
     const token = localStorage.getItem("token");
 
     if (token) {
+      
       router.push('/Dashboard')
     }
 
