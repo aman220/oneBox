@@ -33,19 +33,19 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/yourusername/reachinbox-assignment.git
 
-   Navigate to the Project Directory
+ 
 
 2. **Navigate to the Project Directory**
-```bash
-cd reachinbox-assignment
+     ```bash
+      cd reachinbox-assignment
 
 
 3. **Install Dependencies**
 
-```bash
-npm install
+     ```bash
+     npm install
 
 
 4. **Run the Development Server**
-```bash
-npm run dev
+     ```bash
+     npm run dev
